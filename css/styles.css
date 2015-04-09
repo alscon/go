@@ -2,6 +2,8 @@
 @import url(kate.css);
 @import url(media.css);
 @import url(bur.css);
+@import url(jquery.fancybox.css);
+@import url(jquery.fancybox-buttons.css);
 @import url(bootstrap.min.css);
 @import url(bootstrap-theme.min.css);
 @import url(mainicon.css);
@@ -2460,5 +2462,11 @@ hr {
   position: absolute;
   top: 100px;
   left: 20px; }
+
+.marginTop {
+  margin-top: 40px; }
+
+.photoTitle {
+  z-index: 1 !important; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -22,6 +22,8 @@ $(window).load(function(){
 
     threeForFourth();
 
+    $('.fancybox').fancybox();
+
     $('[data-new-name]').click(function(){
         $(this).parent().prepend('<label class="myname-input" data-named><input placeholder="" value=""><button>OK</button></label>');
         $(this).parent().children('label').children('input').val($(this).text());

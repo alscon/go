@@ -1,7 +1,8 @@
 @import "kate.css";
 @import "media.css";
 @import "bur.css";
-
+@import "jquery.fancybox.css";
+@import "jquery.fancybox-buttons.css";
 @import "bootstrap.min.css";
 @import "bootstrap-theme.min.css";
 
@@ -2809,4 +2810,12 @@ hr {
   position: absolute;
   top: 100px;
   left: 20px;
+}
+
+.marginTop {
+  margin-top: 40px;
+}
+
+.photoTitle {
+  z-index: 1 !important;
 }
