@@ -1,0 +1,234 @@
+
+body
+{
+    overflow-x: hidden;
+}
+
+/*Начало шапки about*/
+.header-about
+{
+    background-image: url('../img/bg-top-about.png');
+    background-position-x: center;
+    width: 100%;
+    background-color: #f9fadb;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+.bg-pink {
+    background-color: #ead1cd;
+}
+.menu-about
+{
+    padding-bottom: 50px;
+    text-align: center;
+}
+.ico-about
+{
+    font-family: 'iconfont';
+    font-style: normal !important;
+    margin-right: 50px;
+}
+.ico-i a
+{
+    font-family: Tahoma;
+    top: -15px
+}
+.ico-d a
+{
+    font-size: 28px !important;
+    top: -12px;
+}
+.ico-go a
+{
+    font-size: 38px !important;
+    top: -10px;
+}
+.ico-about a
+{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-style: normal !important;
+    position: relative;
+}
+.ico-about a:hover
+{
+    text-decoration: none;
+}
+.ico-wg
+{
+    margin-right: 10px;
+}
+.ico-wg a
+{
+    font-size: 60px;
+    text-decoration: none;
+}
+.wb-ico
+{
+    left: 42.4%;
+    top: -36%;
+    margin-top: -37px;
+}
+.wb-ico span
+{
+    position: relative;
+    top: -5px;
+}
+.wb-ico span a
+{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-style: normal !important;
+}
+.wb-ico span a:hover
+{
+    text-decoration: none;
+}
+.bg-pink
+{
+    background-color: #ead1cd;
+}
+.ico-none a
+{
+    font-size: 20px;
+    font-weight: bolder;
+}
+/*Конец шапки about*/
+
+/*Начало контента enter*/
+.top-buttonCont
+{
+    text-align: right !important;
+}
+.top-enterButton
+{
+    padding: 2px 0 !important;
+    text-align: right;
+}
+.header-enter
+{
+    padding-top: 0px !important;
+}
+/*Конец контента enter*/
+
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+    .menu-about
+    {
+        text-align: start;
+    }
+    .menu-about .media-a
+    {
+        float: left;
+    }
+    .wb-ico
+    {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+    .wb-ico
+    {
+        left: 1%;
+    }
+    .top-menu .b-wg
+    {
+        left: 59.7%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 990px) {
+    .menu-about .media-a
+    {
+        width: 271px;
+    }
+    .wb-ico
+    {
+        left: 0%;
+        width: 220px;
+        float: right;
+    }
+    .wb-ico span
+    {
+        right: 25%;
+    }
+    .ico-wg a
+    {
+        font-size: 60px !important;
+        position: relative;
+        left: 68.5%;
+    }
+    .ico-about
+    {
+        margin-right: 22px;
+    }
+    .ico-about a
+    {
+        font-size: 24px;
+    }
+    .ico-d a
+    {
+        font-size: 24px !important;
+    }
+    .ico-go a
+    {
+        font-size: 34px !important;
+        top: -7px;
+    }
+    .top-menu .b-wg
+    {
+        left: 62.4%;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 700px) {
+    .top-menu .b-wg
+    {
+        left: 64.5%;
+        top: -35%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 639px) {
+    .top-menu .b-wg
+    {
+        left: 65.5%;
+        top: -35%;
+    }
+}
+
+@media screen and (min-width: 530px) and (max-width: 599px) {
+    .top-menu .b-wg
+    {
+        left: 67%;
+        top: -35%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 530px) {
+    .top-menu .b-wg
+    {
+        left: 69%;
+        top: -35%;
+    }
+    .ico-about
+    {
+        margin-right: 22px;
+    }
+    .ico-about a
+    {
+        font-size: 24px;
+    }
+    .ico-d a
+    {
+        font-size: 24px !important;
+    }
+    .ico-go a
+    {
+        font-size: 34px !important;
+        top: -7px;
+    }
+}

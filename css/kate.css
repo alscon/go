@@ -1,0 +1,166 @@
+/*Header start*/
+.header
+{
+    padding-top: 50px;
+    background-image: url('../img/header-bg.png');
+    min-height: 375px;
+    background-position-x: center;
+    margin-bottom: -53px;
+}
+.top-menu h2
+{
+    font-size: 24px;
+    line-height: 2.5;
+}
+.ico
+{
+    font-family: 'iconfont';
+    font-size: 65px;
+    font-style: normal !important;
+    float: left;
+    margin-right: 10px;
+    background-color: #f9fadb;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    position:relative;
+    display:inline-block;
+    margin-top: 5px;
+}
+.ico a
+{
+    top: -5px;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-style: normal !important;
+}
+.ico a:hover
+{
+    text-decoration: none;
+}
+.header-wg
+{
+
+}
+.top-menu .b-wg
+{
+    position: absolute;
+    font-family: 'iconfont';
+    font-size: 65px;
+    font-style: normal !important;
+    float: left;
+    margin-right: 10px;
+    left: 58%;
+    top: -36%;
+}
+.top-menu .b-wg a
+{
+    font-size: 110px;
+    color: black;
+    text-decoration: none;
+    font-style: normal !important;
+}
+.top-menu .b-wg a:hover
+{
+    text-decoration: none;
+}
+/*Header end*/
+
+
+
+
+
+
+
+
+
+
+
+
+.header-about
+{
+    background-image: url('../img/bg-top-about.png');
+    background-position-x: center;
+    width: 100%;
+    background-color: #f9fadb;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: -50px;
+}
+.menu-about
+{
+    padding-bottom: 50px;
+    text-align: center;
+}
+.ico-about
+{
+    font-family: 'iconfont';
+    font-style: normal !important;
+    margin-right: 50px;
+}
+.ico-i a
+{
+    font-family: Tahoma;
+    top: -15px
+}
+.ico-d a
+{
+    font-size: 28px !important;
+    top: -12px;
+}
+.ico-go a
+{
+    font-size: 38px !important;
+    top: -10px;
+}
+.ico-about a
+{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-style: normal !important;
+    position: relative;
+}
+.ico-about a:hover
+{
+    text-decoration: none;
+}
+.ico-wg
+{
+    margin-right: 10px;
+}
+.ico-wg a
+{
+    font-size: 60px;
+}
+.wb-ico
+{
+    left: 41.5%;
+    top: -36%;
+    margin-top: -37px;
+}
+.wb-ico span
+{
+    position: relative;
+    top: -5px;
+}
+.wb-ico span a
+{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-style: normal !important;
+}
+.wb-ico span a:hover
+{
+    text-decoration: none;
+}
+.bg-pink
+{
+    background-color: #ead1cd;
+}
+
+
+
