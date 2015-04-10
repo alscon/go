@@ -128,6 +128,10 @@ $(window).resize(function(){
     threeForFourth();
 });
 
+$(window).bind("orientationchange",function(e){
+    threeForFourth();
+});
+
 function threeForFourth() {
   console.log('re');
    var persentWidth;
