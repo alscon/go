@@ -22,8 +22,6 @@ $(window).load(function(){
 
     threeForFourth();
 
-    $('.fancybox').fancybox();
-
     $('[data-new-name]').click(function(){
         $(this).parent().prepend('<label class="myname-input" data-named><input placeholder="" value=""><button>OK</button></label>');
         $(this).parent().children('label').children('input').val($(this).text());
@@ -36,7 +34,7 @@ $(window).load(function(){
         $(this).parent().parent().prepend('<h1 data-new-name></h1>');
         $(this).parent().parent().children('h1').text($(this).parent().children('input').val());
         $(this).parent().remove();
-        $(window).load()
+        $(window).load();
     });
 
     $('#mobileMenu, .mobileMenu').click(function(){
@@ -122,6 +120,7 @@ $(window).load(function(){
 
 $(document).ready(function(){
     threeForFourth();
+    $('.fancybox').fancybox();
 });
 
 $(window).resize(function(){
@@ -133,7 +132,6 @@ $(window).bind("orientationchange",function(e){
 });
 
 function threeForFourth() {
-  console.log('re');
    var persentWidth;
     if ($(window).width() > 768) {
         persentWidth = '33.3%';
@@ -143,8 +141,6 @@ function threeForFourth() {
     } else if ($(window).width() > 2400) {
         persentWidth = '100%';
     }
-
-    console.log(persentWidth);
 
     var width = $('.main-content li').width();
     $('.main-content li').height(((width / 4) * 3));
