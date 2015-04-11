@@ -195,8 +195,14 @@ body {
     border-radius: $border-radius;
     text-align: center;
     border: solid 1px $section-bg;
+    margin-bottom: -5px;
+
 
     @media screen and (max-width: $iphone){
+      width: 100%;
+    }
+
+    @media screen and (max-width: $tablet){
       width: 100%;
     }
 
@@ -216,7 +222,9 @@ body {
   }
 }
 
-
+.main-content-line-2 div:first-child {
+  margin-left: -2px;
+}
 
 .numb {
   width: 40px;
@@ -1423,6 +1431,15 @@ input {
   }
 }
 
+.mobileboxBig {
+  @media screen and (max-width: $tablet){
+    width: 50%;
+  }
+  @media screen and (max-width: $iphone){
+    width: 100%;
+  }
+}
+
 .mobilebox {
   overflow: hidden;
   border-radius: 20px;
@@ -1434,6 +1451,10 @@ input {
   margin-left: 0;
   margin-right: -4px;
   margin-bottom: -5px;
+
+  @media screen and (max-width: $tablet){
+    width: 50%;
+  }
 
   @media screen and (max-width: $iphone){
     width: 100%;
@@ -1504,9 +1525,14 @@ input {
   width: 66.6%;
   margin-right: 0;
 
+  @media screen and (max-width: $tablet){
+    width: 100%;
+    margin-bottom: 0;
+  }
 
   @media screen and (max-width: $iphone){
     width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -2020,9 +2046,20 @@ a:visited, a:active, a:hover {
       position: relative;
       float: right;
       top: -60px;
-      left: -30%;
+      left: -15%;
       font-size: 19px;
+
+      @media screen and (max-width: $tablet) {
+        left: -15%;
+      }
     }
+
+    @media screen and (max-width: 564px) {
+      .exit {
+        left: -10% !important;
+      }
+    }
+
   }
 }
 
@@ -2906,4 +2943,15 @@ html, body {
 
 .eventImg {
   position: relative;
+}
+
+.smallMenu .wg .exit {
+  @media screen and (max-width: $tablet){
+    cursor: pointer;
+    position: relative;
+    float: right;
+    top: -60px;
+    left: -16%;
+    font-size: 19px;
+  }
 }

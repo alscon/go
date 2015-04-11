@@ -143,6 +143,9 @@ function threeForFourth() {
     } else if ($(window).width() > 2400) {
         persentWidth = '100%';
     }
+
+    console.log(persentWidth);
+
     var width = $('.main-content li').width();
     $('.main-content li').height(((width / 4) * 3));
     $('.main-content li').css('width', persentWidth);
@@ -152,35 +155,70 @@ function threeForFourth() {
     function podgonkaBig() {
         $('.main-content').children('li').children('div').css({width: '100%'});
         $('.main-content').css({position: 'relative', width: '100%'});
-        $('.main-content').children('li').css({position: 'absolute', width: '33.3%', margin: 0});
+        $('.main-content').children('li').css({position: 'absolute', width: persentWidth, margin: 0});
 
-        var hei = 0;
-        $('.main-content').children('li').each(function(i, elem){
-            if(i === 0) {
-                $(elem).css({top: 0, left: 0});
-            }
-            if(i === 1) {
-                $(elem).css({top: 0, left: 'calc(33.3% + 1px)'});
-                hei = $(elem).height() + 2;
-            }
-            if(i === 2) {
-                $(elem).css({top: 0, left: 'calc(66.6% + 2px)'});
-            }
-            if(i === 3) {
-                $(elem).css({top: hei + 'px', left: 'calc(33.3% + 1px)'});
-            }
-            if(i === 4) {
-                $(elem).css({top: hei + 'px', left: 'calc(66.6% + 2px)', height: $(elem).height() - 1 + 'px'});
-            }
-            if(i === 5) {
-                $(elem).css({top: (hei * 2) + 'px', left: 0});
-            }
-            if(i === 6) {
-                $(elem).css({top: (hei * 2) + 'px', left: 'calc(33.3% + 1px)'});
-            }
-        });
+        if ($(window).width() > 768) {
+            var hei = 0;
+            $('.main-content').children('li').each(function(i, elem){
+                if(i === 0) {
+                    $(elem).css({top: 0, left: 0});
+                }
+                if(i === 1) {
+                    $(elem).css({top: 0, left: 'calc(33.3% + 1px)'});
+                    hei = $(elem).height() + 2;
+                }
+                if(i === 2) {
+                    $(elem).css({top: 0, left: 'calc(66.6% + 2px)'});
+                }
+                if(i === 3) {
+                    $(elem).css({top: hei + 'px', left: 'calc(33.3% + 1px)'});
+                }
+                if(i === 4) {
+                    $(elem).css({top: hei + 'px', left: 'calc(66.6% + 2px)', height: $(elem).height() - 1 + 'px'});
+                }
+                if(i === 5) {
+                    $(elem).css({top: (hei * 2) + 'px', left: 0});
+                }
+                if(i === 6) {
+                    $(elem).css({top: (hei * 2) + 'px', left: 'calc(33.3% + 1px)'});
+                }
+            });
 
-        $('.main-content').css({height: hei + (hei * 2) - 2 + 'px'});
+            $('.main-content').css({height: hei + (hei * 2) - 2 + 'px'});
+
+        } else {
+
+            var hei = 0;
+            $('.main-content').children('li').each(function(i, elem){
+                if(i === 0) {
+                    $(elem).css({top: 0, left: 0});
+                    hei = $(elem).height() + 2;
+                }
+                if(i === 1) {
+                    $(elem).css({top: 0, left: 'calc(50% + 1px)'});
+
+                }
+                if(i === 2) {
+                    $(elem).css({top: hei / 2, left: 'calc(50% + 1px)'});
+                }
+                if(i === 3) {
+                    $(elem).css({top: hei + 'px', left: 0});
+                }
+                if(i === 4) {
+                    $(elem).css({top: hei + 'px', left: 'calc(50% + 1px)', height: $(elem).height() - 1 + 'px'});
+                }
+                if(i === 5) {
+                    $(elem).css({top: (hei * 2) + 'px', left: 0});
+                }
+                if(i === 6) {
+                    $(elem).css({top: ((hei * 2) - (hei / 2)) + 'px', left: 0});
+                }
+            });
+
+            $('.main-content').css({height: (hei * 2) + (hei / 2) + 'px'});
+        }
+
+
     }
 
     function podgonkaTel() {
@@ -222,7 +260,7 @@ function threeForFourth() {
 
     var main_one_width = parseInt($('.main-content-line-1 div').css('width'));
     var main_one_height = (main_one_width / 4) * 3;
-    $('.main-content-line-1 div').css({height: main_one_height + 'px', width: '25%'});
+    $('.main-content-line-1 div').css({height: main_one_height + 'px'});
 
 
     var main_two_width = parseInt($('.main-content-line-2 div').css('width'));
