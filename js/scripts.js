@@ -132,7 +132,7 @@ $(window).bind("orientationchange",function(e){
 });
 
 function threeForFourth() {
-   var persentWidth;
+    var persentWidth;
     if ($(window).width() > 768) {
         persentWidth = '33.3%';
 
@@ -211,7 +211,13 @@ function threeForFourth() {
                 }
             });
 
-            $('.main-content').css({height: (hei * 2) + (hei / 2) + 'px'});
+            if($(window).width() > 767) {
+                $('.main-content').css({height: (hei * 2) + (hei / 2) + 'px'});
+            } else {
+                $('.main-content').css({height: (hei * 2) + 'px'});
+            }
+
+
         }
 
 
@@ -226,7 +232,7 @@ function threeForFourth() {
 
         $('.main-content').children('li').each(function(i, elem){
             if(i === 0) {
-                $(elem).css({top: 0, left: 0});
+                $(elem).css({top: 0, left: 0, height: ($(elem).height() - 1) + 'px'});
             }
             if(i === 1) {
                 $(elem).css({top: 0, left: '50%%'});
@@ -250,13 +256,86 @@ function threeForFourth() {
         });
     }
 
-    if ($(window).width() > 480) {
-        podgonkaBig();
+
+    var mobile_width = $('.mobilebox').width();
+    var mobile_heigth = (mobile_width * 3) / 4;
+    $('.mobilebox').height(mobile_heigth + (mobile_heigth / 3));
+    $('.mobilebox .mobile-title').height(((mobile_heigth / 3) + 30));
+    $('.main-content-line-3').css({position: 'relative'});
+
+    function podgonkaMain() {
+
+        $('.main-content-line-3').children('.mobilebox').css({position: 'absolute', width: '33.3%'});
+        var hey = $('.mobilebox').height();
+        $('.main-content-line-3').children('.mobilebox').each(function(i, elem){
+            if(i === 0) {
+                $(elem).css({top: 0, left: 0})
+            }
+
+            if(i === 1) {
+                $(elem).css({top: 0, left: '33.3%'})
+            }
+
+            if(i === 2) {
+                $(elem).css({top: 0, left: '66.6%'})
+            }
+
+            if(i === 3) {
+                $(elem).css({top: (hey + 2) + 'px', left: 0, width: '66.6%'})
+            }
+
+            if(i === 4) {
+                $(elem).css({top: (hey + 2), left: '66.6%'})
+            }
+
+            if(i === 5) {
+                $(elem).css({top: (hey * 2) + 4 + 'px', left: 0})
+            }
+        })
     }
 
     var main_one_width = parseInt($('.main-content-line-1 div').css('width'));
     var main_one_height = (main_one_width / 4) * 3;
     $('.main-content-line-1 div').css({height: main_one_height + 'px'});
+
+    function podgonkaLine() {
+
+        $('.main-content-line-1').css({position: 'relative', height: $('.main-content-line-1').children('div').height()});
+        $('.main-content-line-1').children('div').css('position', 'absolute');
+        $('.main-content-line-1').children('div').each(function(i, elem){
+            if(i === 0) {
+                $(elem).css({top: 0, left: 0})
+            }
+
+            if(i === 1) {
+                $(elem).css({top: 0, left: '25%'})
+            }
+
+            if(i === 2) {
+                $(elem).css({top: 0, left: '50%'})
+            }
+
+            if(i === 3) {
+                $(elem).css({top: 0, left: '75%'})
+            }
+        });
+    }
+
+
+    if ($(window).width() > 480) {
+        podgonkaBig();
+        podgonkaMain();
+
+    }
+
+
+    if ($(window).width() < 768) {
+        $('.dispHide').hide();
+    } else {
+        $('.dispHide').show();
+        podgonkaLine();
+    }
+
 
 
     var main_two_width = parseInt($('.main-content-line-2 div').css('width'));
@@ -277,7 +356,6 @@ function threeForFourth() {
     var event_width = parseInt($('.eventImg').css('width'));
     event_width -= 6;
     var event_height = (event_width / 4) * 3;
-    $('.eventImg').css('width', event_width + 'px');
     $('.eventImg').css('height', event_height + 'px');
 
     var eventcontentline_width = parseInt($('.event-content-line').css('width'));
@@ -307,11 +385,6 @@ function threeForFourth() {
     var modal_img_width = $('.modal-img').width();
     var modal_img_height = (modal_img_width / 4) * 3;
     $('.modal-img').height(modal_img_height);
-
-    var mobile_width = $('.mobilebox').width();
-    var mobile_heigth = (mobile_width * 3) / 4;
-    $('.mobilebox').height(mobile_heigth + (mobile_heigth / 3));
-    $('.mobilebox .mobile-title').height((mobile_heigth / 3));
 
     var chat_width = $('.chat').width();
     var chat_height = (chat_width / 4) * 3;
