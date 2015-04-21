@@ -1,4 +1,24 @@
+var name = 'Меня не зовут';
+var date = 'Mar 20, 2015 5:04:40 PM';
+
 $(window).load(function(){
+
+    $('#winwidth').text($(window).width());
+
+    $('#newMess').click(function(){
+        $(this).before('<label class="myname-input" id="textMess"><input type="text"><button>OK</button></label>');
+        $(this).remove();
+        $(window).load();
+    });
+
+    $('#textMess').children('button').click(function(){
+        var mess = $(this).parent().children('input').val();
+        $(this).parent().before('<div class="messageContainer applyBg"><div class="sect"><p class="pType_2">' + mess + '</p></div><div class="sect"><h2 class="hType_2">' + name + '</h2><time>' + date + '</time></div></div><h1 id="newMess">Новое сообщение</h1>');
+        $(this).parent().remove();
+        $(window).load();
+    });
+
+
     $('.button-ico').click(function(){
         $('.button-ico').removeAttr('style', '');
         $(this).css('background', '#feab83');
@@ -121,6 +141,7 @@ $(window).load(function(){
 $(document).ready(function(){
     threeForFourth();
     $('.fancybox').fancybox();
+    $('.icon-facebook29')
 });
 
 $(window).resize(function(){
@@ -132,6 +153,7 @@ $(window).bind("orientationchange",function(e){
 });
 
 function threeForFourth() {
+    $('#winwidth').text($(window).width() + 'r');
     var persentWidth;
     if ($(window).width() > 768) {
         persentWidth = '33.3%';
@@ -147,7 +169,7 @@ function threeForFourth() {
     $('.main-content li').css('width', persentWidth);
     $('.li-left, .li-right').height(($('.main-content li').height() * 2) + 3);
     $('.li-left, .li-right').css('width', persentWidth);
-
+    var hay;
     function podgonkaBig() {
         $('.main-content').children('li').children('div').css({width: '100%'});
         $('.main-content').css({position: 'relative', width: '100%'});
@@ -180,6 +202,7 @@ function threeForFourth() {
                 }
             });
 
+            hay = hei;
             $('.main-content').css({height: hei + (hei * 2) - 2 + 'px'});
 
         } else {
@@ -211,7 +234,7 @@ function threeForFourth() {
                 }
             });
 
-            if($(window).width() > 767) {
+            if($(window).width() > 768) {
                 $('.main-content').css({height: (hei * 2) + (hei / 2) + 'px'});
             } else {
                 $('.main-content').css({height: (hei * 2) + 'px'});
@@ -329,13 +352,19 @@ function threeForFourth() {
     }
 
 
-    if ($(window).width() < 768) {
+    if ($(window).width() < 767) {
         $('.dispHide').hide();
+
     } else {
         $('.dispHide').show();
-        podgonkaLine();
     }
 
+    if ($(window).width() < 767) {
+        $('.main-content-line-1').children('div').css({position: 'relative', top: '0', left: 0, 'margin-bottom': '1px'});
+        $('.main-content-line-1').css({position: 'relative', height: 'auto'});
+    } else {
+        podgonkaLine();
+    }
 
 
     var main_two_width = parseInt($('.main-content-line-2 div').css('width'));

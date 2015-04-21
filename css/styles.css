@@ -230,7 +230,7 @@ body {
     border: solid 1px #f9fadb; }
     .main-content-line-1 div:first-child {
       margin-left: 0; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .main-content-line-1 div {
         width: 50%; } }
     @media screen and (max-width: 480px) {
@@ -354,13 +354,13 @@ body {
         font-family: 'iconfont';
         font-style: normal;
         font-size: 44px;
-        top: 2px;
+        top: 0px;
         line-height: normal; }
       .button-ico p {
         text-align: center;
         font-size: 10px;
         font-family: Tahoma, sans-serif;
-        top: 2px;
+        top: -2px;
         line-height: 0; } }
 
 .right-col {
@@ -531,6 +531,9 @@ body {
       color: #010101;
       padding: 10px 0;
       margin: 0; }
+      @media screen and (max-width: 769px) {
+        .eventBlock .eventTitle h1 {
+          float: left; } }
     .eventBlock .eventTitle .eventButton {
       display: inline;
       float: right;
@@ -832,6 +835,18 @@ body {
   font-size: 28px;
   padding: 0;
   cursor: default; }
+  @media screen and (max-width: 1200px) {
+    .plusApplyButton {
+      position: absolute;
+      z-index: 2;
+      right: 12%;
+      top: 0; } }
+  @media screen and (max-width: 768px) {
+    .plusApplyButton {
+      position: absolute;
+      z-index: 2;
+      right: 5px;
+      bottom: 2px; } }
   @media screen and (max-width: 480px) {
     .plusApplyButton {
       position: absolute;
@@ -845,6 +860,18 @@ body {
   width: 100%;
   overflow: hidden;
   background: #fff; }
+  @media screen and (max-width: 1200px) {
+    .applyBlock {
+      width: 65%;
+      margin: auto; } }
+  @media screen and (max-width: 768px) {
+    .applyBlock {
+      width: 85%;
+      margin: auto; } }
+  @media screen and (max-width: 480px) {
+    .applyBlock {
+      width: 100%;
+      margin: auto; } }
   .applyBlock .plusApplyButton {
     width: auto;
     height: auto;
@@ -1919,6 +1946,9 @@ a:visited, a:active, a:hover, a:visited {
     color: #fff;
     text-align: center;
     padding: 1% 0; }
+    @media screen and (max-width: 768px) {
+      .modalWindow_type2 h1 {
+        padding: 5% 0; } }
     @media screen and (max-width: 480px) {
       .modalWindow_type2 h1 {
         padding: 10% 0; } }
@@ -2246,6 +2276,9 @@ a:visited, a:active, a:hover, a:visited {
   display: inline-block;
   vertical-align: top;
   margin-left: 35px; }
+  @media screen and (max-width: 768px) {
+    .two {
+      width: calc(46% - 40px); } }
 
 .floatLeft {
   float: left; }
@@ -2341,6 +2374,9 @@ hr {
   color: #fff;
   font-size: 26px;
   cursor: pointer; }
+  @media screen and (max-width: 769px) {
+    #remove {
+      bottom: 30px; } }
 
 #number {
   position: absolute;
@@ -2349,6 +2385,9 @@ hr {
   color: #fff;
   font-size: 26px;
   cursor: pointer; }
+  @media screen and (max-width: 769px) {
+    #number {
+      bottom: 30px; } }
 
 .burgerButton {
   float: right;
@@ -2583,5 +2622,11 @@ html, body {
     top: -60px;
     left: -16%;
     font-size: 19px; } }
+
+.relative {
+  position: relative; }
+
+.icon-facebook29 {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */

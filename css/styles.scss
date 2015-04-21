@@ -147,7 +147,7 @@ body {
     margin-bottom: -4px;
     border: solid 1px $section-bg;
 
-    @media screen and (max-width: $tablet){
+    @media screen and (max-width: 767px){
       width: 50%;
     }
 
@@ -284,7 +284,7 @@ body {
       font-family: 'iconfont';
       font-style: normal;
       font-size: 44px;
-      top: 2px;
+      top: 0px;
       line-height: normal;
     }
 
@@ -292,7 +292,7 @@ body {
       text-align: center;
       font-size: 10px;
       font-family: Tahoma, sans-serif;
-      top: 2px;
+      top: -2px;
       line-height: 0;
     }
   }
@@ -493,6 +493,9 @@ body {
       color: #010101;
       padding: 10px 0;
       margin: 0;
+      @media screen and (max-width: 769px){
+        float: left;
+      }
     }
 
     .eventButton {
@@ -859,6 +862,20 @@ body {
   padding: 0;
   cursor: default;
 
+  @media screen and (max-width: 1200px) {
+    position: absolute;
+    z-index: 2;
+    right: 12%;
+    top: 0;
+  }
+
+  @media screen and (max-width: $tablet) {
+    position: absolute;
+    z-index: 2;
+    right: 5px;
+    bottom: 2px;
+  }
+
   @media screen and (max-width: $iphone) {
     position: absolute;
     z-index: 2;
@@ -873,6 +890,21 @@ body {
   width: 100%;
   overflow: hidden;
   background: #fff;
+
+  @media screen and (max-width: 1200px){
+    width: 65%;
+    margin: auto;
+  }
+
+  @media screen and (max-width: $tablet){
+    width: 85%;
+    margin: auto;
+  }
+
+  @media screen and (max-width: $iphone){
+    width: 100%;
+    margin: auto;
+  }
 
   .plusApplyButton {
     width: auto;
@@ -2135,6 +2167,10 @@ a:visited, a:active, a:hover, a:visited {
     text-align: center;
     padding: 1% 0;
 
+    @media screen and (max-width: $tablet){
+      padding: 5% 0;
+    }
+
     @media screen and (max-width: $iphone){
       padding: 10% 0;
     }
@@ -2552,6 +2588,10 @@ a:visited, a:active, a:hover, a:visited {
   display: inline-block;
   vertical-align: top;
   margin-left: 35px;
+
+  @media screen and (max-width: $tablet){
+    width: calc(46% - 40px);
+  }
 }
 
 .floatLeft {
@@ -2666,6 +2706,10 @@ hr {
   color: #fff;
   font-size: 26px;
   cursor: pointer;
+
+  @media screen and (max-width: 769px){
+    bottom: 30px;
+  }
 }
 
 #number {
@@ -2675,6 +2719,10 @@ hr {
   color: #fff;
   font-size: 26px;
   cursor: pointer;
+
+  @media screen and (max-width: 769px){
+    bottom: 30px;
+  }
 }
 
 .burgerButton {
@@ -2973,3 +3021,10 @@ html, body {
   }
 }
 
+.relative {
+  position: relative;
+}
+
+.icon-facebook29 {
+  display: none;
+}
